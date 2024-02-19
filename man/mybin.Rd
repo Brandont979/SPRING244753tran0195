@@ -19,3 +19,7 @@ a barplot of the simulated binomial experiment with given parameters
 \description{
 Binomial experiment simulation
 }
+\examples{
+mybin(iter = 1000, n = 20, p = .1)
+
+}

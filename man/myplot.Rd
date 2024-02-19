@@ -16,6 +16,6 @@ predicted height value
 Fitted line model for quad.lm
 }
 \examples{
-SPRING244753tran0195::myplot(x)
+myplot(3)
 
 }

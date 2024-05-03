@@ -1,5 +1,5 @@
 ---
-title: "my-vignette"
+title: "Vignette"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
@@ -17,3 +17,66 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(SPRING244753tran0195)
 ```
+
+# Introduction
+
+This package contains functions that were implemented throughout MATH 4753's class. The functions in this package came mostly from labs in the class. These functions take in data and arguments to create graphs and output data. 
+
+## myclt function
+```{r}
+myclt(3, 1000)
+```
+
+The myclt function creates a histogram of uniformed distributions generated from the arguments of a sample size of 3 and 1000 trials.
+
+## myplot Function 
+```{r}
+myplot(5)
+```
+
+This myplot function creates a fitted line model for quad.lm using a 5 BHDiameter value and returns a predicted height value.
+
+## mybin function
+```{r}
+mybin(iter = 1000, n = 20, p = .1)
+```
+
+This mybin function is for a binomial experiment simulation. The function takes in arguments for iterations, number of trials, and probability of success to create a barplot of the simulated binomial experiment.
+
+## myboot2 function
+```{r}
+myboot2(iter = 100000, x = rnorm(25,mean=25,sd=10), fun = "mean", alpha = 0.05)
+```
+
+The myboot2R function is for a bootsrap interval function. It takes in arguments for iter number of iterations, x sample data, fun function to apply, alpha significance level of confidence linterval, cx text size, and any additional arugments that might be needed to create a histogram of boostrap sample statistics.
+
+## ntickets function
+```{r}
+ntickets(200, 0.02, 0.95)
+```
+
+This ntickets function was used in project 1 to estimate the number of people needing to show up for those who bought tickets for an airline to not overbook. It takes in arguments for number of seats on the plane, probability a plane will be truly overbooked, and probability of a "show up". It returns A named list of nd, nc, N, p, and gamma and a continuous and discrete plot. 
+
+## mymaxlik function
+```{r}
+y = c(3,3,4,3,4,5,5,4)
+logbin = function(x, param)
+log(dbinom(x, prob = param, size = 20))
+mymaxlik(lfun=logbin, x=y, param = seq(0, 1, length = 1000), main = "Binomial for n = 20")
+```
+
+This mymaxlik function is a function for the maximum likelihood. It takes in arguments lfun the likelihood function, x vector of variables of the likelihood function, param vector of paremeters of the likelihood function and any additional arugments that might be needed. It returns  a list of the index of the maximum likelihood estimate, parameter value of the max likelihood estimate, yi the log likelihood, and the slope of the log likelihood curve and a plot for the maximum likelihood.
+
+## myncurve function
+```{r}
+myncurve(1, 0, 1)
+```
+
+The myncurve function creates a normal curve. It takes in arugments for a probability limit, mu mean, and sigma standard deviation. It returns a graph of the normal curve using the function and a list of mu, sigma, and normprob.
+
+## myquad function
+```{r}
+myquad(x = 1:10)
+```
+
+The myquad function is for a qudratic function. It takes in an argument x numeric vector and returns a numeric vector and a graph of the quadratic function.

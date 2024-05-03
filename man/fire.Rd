@@ -3,7 +3,8 @@
 \docType{data}
 \name{fire}
 \alias{fire}
-\title{Fire data}
+\title{Firedam.csv data from textbook with cost of fire damage in thousands
+of dollars and distance of home to nearest fire station}
 \format{
 An object of class \code{data.frame} with 15 rows and 2 columns.
 }
@@ -11,6 +12,7 @@ An object of class \code{data.frame} with 15 rows and 2 columns.
 fire
 }
 \description{
-Fire data
+Firedam.csv data from textbook with cost of fire damage in thousands
+of dollars and distance of home to nearest fire station
 }
 \keyword{datasets}
